@@ -6,6 +6,10 @@ export default defineNuxtConfig({
     router: {
       base: '/josewenzel.github.io/'
     },
+    ssr: false,
+    nitro: {
+        preset: 'service-worker'
+    },
     googleFonts: {
         families: {
             Spectral: [400, 700],
