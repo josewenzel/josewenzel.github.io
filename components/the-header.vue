@@ -5,10 +5,15 @@
       <nav class="main-nav">
         <ul class="main-nav_list">
           <li class="main-nav_list-item">
-            <nuxt-link class="main-nav_link" to="/">About</nuxt-link>
+            <nuxt-link class="main-nav_link" to="/about">About</nuxt-link>
           </li>
           <li class="main-nav_list-item">
-            <nuxt-link class="main-nav_link" to="/">Github</nuxt-link>
+            <nuxt-link
+              class="footer-nav_item-text"
+              to="https://github.com/josewenzel"
+              target="_blank"
+              >Github</nuxt-link
+            >
           </li>
         </ul>
       </nav>

@@ -9,10 +9,17 @@
             >
           </li>
           <li class="footer-nav_item">
-            <nuxt-link class="footer-nav_item-text" to="/">About</nuxt-link>
+            <nuxt-link class="footer-nav_item-text" to="/about"
+              >About</nuxt-link
+            >
           </li>
           <li class="footer-nav_item">
-            <nuxt-link class="footer-nav_item-text" to="/">Github</nuxt-link>
+            <nuxt-link
+              class="footer-nav_item-text"
+              to="https://github.com/josewenzel"
+              target="_blank"
+              >Github</nuxt-link
+            >
           </li>
         </ul>
       </nav>
