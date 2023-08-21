@@ -2,6 +2,7 @@
 title: My First Entry, Welcome to my Blog!
 description: Something One
 date: 06/11/2022
+state: draft
 tags:
   - Engineering
   - Agile Practices

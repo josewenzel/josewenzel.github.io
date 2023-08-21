@@ -2,6 +2,7 @@
 title: Software Engineering, a Quick Glance as Poor Technical Practices
 description: Something Two
 date: 09/12/2022
+state: draft
 tags:
   - Engineering
 ---

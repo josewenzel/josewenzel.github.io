@@ -1,7 +1,11 @@
 <template>
   <div class="post-list">
     <content-list :query="query" v-slot="{ list }">
-      <div v-for="post in list" :key="post._path" class="post-list_item-row">
+      <div
+        v-for="post in list.filter((p) => p.status === 'published')"
+        :key="post._path"
+        class="post-list_item-row"
+      >
         <post-list-item :post="post" />
       </div>
     </content-list>
