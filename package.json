@@ -7,7 +7,6 @@
     "generate": "nuxi generate",
     "preview": "nuxi preview",
     "start": "nuxi start",
-    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup",
     "postinstall": "nuxi prepare"
   },
   "devDependencies": {
@@ -15,8 +14,7 @@
     "@nuxt/devtools": "latest",
     "@nuxtjs/google-fonts": "^3.0.1",
     "nuxt": "^3.6.1",
-    "prettier": "^3.0.0",
-    "push-dir": "^0.4.1"
+    "prettier": "^3.0.0"
   },
   "dependencies": {
     "shiki": "^0.14.3"
