@@ -3,7 +3,8 @@
     <content-doc :path="$route._path" v-slot="{ doc }">
       <div class="post-tags">
         <div class="post-tags_item" v-for="tag in doc.tags">
-          <nuxt-link :to="`../tags/${tag}`">{{ tag }}</nuxt-link>
+<!--          <nuxt-link :to="`../tags/${tag}`">{{ tag }}</nuxt-link>-->
+          <nuxt-link :to="`#`">{{ tag }}</nuxt-link>
         </div>
       </div>
       <h1 class="post-title">{{ doc.title }}</h1>
