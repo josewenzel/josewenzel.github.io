@@ -9,7 +9,7 @@
           </li>
           <li class="main-nav_list-item">
             <nuxt-link
-              class="footer-nav_item-text"
+              class="main-nav_link"
               to="https://github.com/josewenzel"
               target="_blank"
               >Github</nuxt-link
