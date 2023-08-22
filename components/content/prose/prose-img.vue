@@ -1,34 +1,34 @@
 <template>
-  <img :src="refinedSrc" :alt="alt" :width="width" :height="height">
+  <img :src="refinedSrc" :alt="alt" :width="width" :height="height" />
 </template>
 
 <script setup lang="ts">
-import { withBase } from 'ufo'
-import { useRuntimeConfig, computed } from '#imports'
+import { withBase } from "ufo";
+import { useRuntimeConfig, computed } from "#imports";
 
 const props = defineProps({
   src: {
     type: String,
-    default: ''
+    default: "",
   },
   alt: {
     type: String,
-    default: ''
+    default: "",
   },
   width: {
     type: [String, Number],
-    default: undefined
+    default: undefined,
   },
   height: {
     type: [String, Number],
-    default: undefined
-  }
-})
+    default: undefined,
+  },
+});
 
 const refinedSrc = computed(() => {
-  if (props.src?.startsWith('/') && !props.src.startsWith('//')) {
-    return withBase(props.src, useRuntimeConfig().app.baseURL)
+  if (props.src?.startsWith("/") && !props.src.startsWith("//")) {
+    return withBase(props.src, useRuntimeConfig().app.baseURL);
   }
-  return props.src
-})
+  return props.src;
+});
 </script>

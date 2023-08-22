@@ -16,7 +16,7 @@
           <li class="footer-nav_item">
             <nuxt-link
               class="footer-nav_item-text"
-              to="https://github.com/josewenzel"
+              :to="useRuntimeConfig().githubUrl"
               target="_blank"
               >Github</nuxt-link
             >

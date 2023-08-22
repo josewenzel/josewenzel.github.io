@@ -2,14 +2,14 @@
 defineProps({
   href: {
     type: String,
-    default: ''
+    default: "",
   },
   target: {
     type: String,
     default: "_blank",
-    required: false
-  }
-})
+    required: false,
+  },
+});
 </script>
 
 <template>
@@ -19,11 +19,11 @@ defineProps({
 </template>
 
 <style scoped>
-  a {
-    color: #757575;
-  }
+a {
+  color: #757575;
+}
 
-  a:hover {
-    color: #9f9f9f;
-  }
+a:hover {
+  color: #9f9f9f;
+}
 </style>

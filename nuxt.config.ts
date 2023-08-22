@@ -12,4 +12,7 @@ export default defineNuxtConfig({
             Megrim: true,
         },
     },
+    runtimeConfig: {
+        githubUrl: "https://github.com/josewenzel"
+    }
 });

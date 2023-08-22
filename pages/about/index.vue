@@ -1,13 +1,17 @@
 <template>
-<div>Fuck off you little cunt</div>
+  <div class="container"></div>
 </template>
 
 <script>
 export default {
-  name: "index"
-}
+  name: "index",
+};
 </script>
 
 <style scoped>
-
+.container {
+  width: 66.666667%;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
 </style>
