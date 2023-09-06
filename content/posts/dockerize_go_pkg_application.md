@@ -73,7 +73,7 @@ have one you only need to add those 3 variables, and you're good to go._
 For the sake of this post I will not integrate the database with the application (this will come in a later post), so
 for now I've created a small application with the following structure:
 
-```
+```shell
 ├── db
 ├── src
 │   └── api
@@ -89,7 +89,7 @@ by step.
 
 First we need a base image and set the working directory:
 
-```
+```dockerfile
 FROM golang:1.20
 
 WORKDIR /app
@@ -99,7 +99,7 @@ Now we need to "import" our code into the image, by copying the `go.mod` and `go
 dependencies declared in them (for now I'm just using a very lightweight http library
 called [chi](https://github.com/go-chi/chi/):
 
-```
+```dockerfile
 COPY go.* ./
 RUN go mod download
 COPY . ./
@@ -107,7 +107,7 @@ COPY . ./
 
 Once all the needed code for the build is in the working directory we can build our small application by adding:
 
-```
+```dockerfile
 RUN go build -C src -o /flagify-app
 ```
 
@@ -117,7 +117,7 @@ worth mentioning that if you are using the `-C` flag it necessarily needs to be 
 
 Now we're ready to run our application, by adding the last two lines on the file:
 
-```
+```dockerfile
 EXPOSE 8123
 CMD ["/flagify-app"]
 ```
@@ -128,13 +128,13 @@ visit [docker's official documentation](https://docs.docker.com/get-started/02_o
 
 To build the image with a given tag name you need to run:
 
-```
+```shell
 docker build -t <tag-name> .
 ```
 
 Once the image is build it is stored in your machine, so you can run the image by referencing the tag you gave to it:
 
-```
+```shell
 docker run -p 8080:8123 <tag-name>
 ```
 
@@ -144,7 +144,7 @@ port of `8080` will be mapped to the `8123` port of the container (which is the 
 
 Now if your application is running correctly you should receive an unauthorized response if running:
 
-```
+```shell
 curl http://localhost:8080/status
 ```
 
