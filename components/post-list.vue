@@ -2,7 +2,7 @@
   <div class="post-list">
     <content-list :query="query" v-slot="{ list }">
       <div
-        v-for="post in list.filter((p) => p.state === 'published')"
+        v-for="post in list"
         :key="post._path"
         class="post-list_item-row"
       >
