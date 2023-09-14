@@ -19,7 +19,7 @@ docker container.
 The structure of our application is very simple and small, with a `Dockerfile` in the root and a `main.go` file in
 the `src` directory.
 
-```text
+```bash
 ├── Dockerfile
 ├── go.mod
 └── src
